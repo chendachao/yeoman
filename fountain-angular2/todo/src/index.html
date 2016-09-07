@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>ngrx/store TodoMVC</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
+  
+    <!-- build:css(.tmp) index.css -->
+    <link rel="stylesheet" href="index.css"></link>
+    <!-- endbuild -->
+  </head>
+
+
+  <body>
+    <div class="todoapp">
+      <fountain-root>Loading...</fountain-root>
+    </div>
+  </body>
+
+  <!-- <script src="node_modules/reflect-metadata/Reflect.js"></script> -->
+  <!-- build:js(.tmp) index.js -->
+  <script src="jspm_packages/system.js"></script>
+  <script src="jspm.browser.js"></script>
+  <script src="jspm.config.js"></script>
+
+  <script>
+    System.import('src/index.ts');
+  </script>
+  <!-- endbuild -->
+</html>
+
