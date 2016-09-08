@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 
+import { Observable } from 'rxjs/Observable';
+
 import * as _tempalte from './hello.html';
 import _styles from './hello.css!';
 

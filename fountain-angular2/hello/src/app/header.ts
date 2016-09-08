@@ -1,8 +1,9 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'fountain-header',
-  moduleId: __moduleName,
-  templateUrl: 'header.html'
+    selector: 'fountain-header',
+    moduleId: __moduleName,
+    templateUrl: 'header.html'
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+}
