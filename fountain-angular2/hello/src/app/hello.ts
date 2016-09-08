@@ -19,5 +19,6 @@ export class HelloComponent {
 
   constructor() {
     this.hello = 'Hello World!';
+    console.log(Observable);
   }
 }
