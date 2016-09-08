@@ -1,5 +1,6 @@
 /// <reference path="../../typings/index.d.ts"/>
 
+// TODO: separate such common libs in a polyfill file
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
 import 'zone.js/dist/async-test';

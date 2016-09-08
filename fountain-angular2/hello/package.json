@@ -69,6 +69,8 @@
       "json": "github:systemjs/plugin-json@^0.1.2",
       "reflect-metadata": "npm:reflect-metadata@0.1.3",
       "es6-shim": "npm:es6-shim@^0.35.0",
+      "sass": "github:mobilexag/plugin-sass@^0.4.6",
+      "scss": "github:KevCJones/plugin-scss@^0.2.11",
       "text": "github:systemjs/plugin-text@^0.0.9",
       "ts": "github:frankwallis/plugin-typescript@4.0.16",
       "ts-helpers": "npm:ts-helpers@^1.1.1"
@@ -80,12 +82,22 @@
       "@angular/core": "npm:@angular/core@^2.0.0-rc.4",
       "@angular/platform-browser": "npm:@angular/platform-browser@2.0.0-rc.4",
       "@angular/platform-browser-dynamic": "npm:@angular/platform-browser-dynamic@2.0.0-rc.4",
+      "assert": "github:jspm/nodelibs-assert@^0.2.0-alpha",
+      "buffer": "github:jspm/nodelibs-buffer@^0.2.0-alpha",
+      "child_process": "github:jspm/nodelibs-child_process@^0.2.0-alpha",
+      "constants": "github:jspm/nodelibs-constants@^0.2.0-alpha",
+      "crypto": "github:jspm/nodelibs-crypto@^0.2.0-alpha",
+      "events": "github:jspm/nodelibs-events@^0.2.0-alpha",
       "fs": "github:jspm/nodelibs-fs@^0.2.0-alpha",
       "os": "github:jspm/nodelibs-os@^0.2.0-alpha",
       "path": "github:jspm/nodelibs-path@^0.2.0-alpha",
       "process": "github:jspm/nodelibs-process@^0.2.0-alpha",
       "rxjs": "npm:rxjs@5.0.0-beta.6",
+      "stream": "github:jspm/nodelibs-stream@^0.2.0-alpha",
+      "string_decoder": "github:jspm/nodelibs-string_decoder@^0.2.0-alpha",
       "typescript": "npm:typescript",
+      "util": "github:jspm/nodelibs-util@^0.2.0-alpha",
+      "vm": "github:jspm/nodelibs-vm@^0.2.0-alpha",
       "zone.js": "npm:zone.js@^0.6.6"
     },
     "overrides": {
@@ -200,8 +212,19 @@
           "css": "0.1"
         }
       },
+      "npm:inherits@2.0.3": {
+        "ignore": [
+          "test.js"
+        ]
+      },
       "npm:jquery@3.1.0": {
         "format": "amd"
+      },
+      "npm:lodash@4.15.0": {
+        "map": {
+          "buffer": "@empty",
+          "process": "@empty"
+        }
       },
       "npm:reflect-metadata@0.1.3": {
         "jspmNodeConversion": false,
@@ -209,6 +232,16 @@
           "crypto": {
             "node": "@node/crypto",
             "default": "@empty"
+          }
+        }
+      },
+      "npm:sass.js@0.9.12": {
+        "map": {
+          "ws": "@empty"
+        },
+        "meta": {
+          "dist/sass.worker.js": {
+            "format": "global"
           }
         }
       },
