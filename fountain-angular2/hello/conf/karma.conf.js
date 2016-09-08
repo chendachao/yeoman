@@ -28,7 +28,7 @@ module.exports = function (config) {
         jspm: {
             // Path to your SystemJS/JSPM configuration file
             config: 'jspm.config.js',
-            browser: 'jspm.test.js',
+            browser: 'conf/karma-jspm.shim.js',
             
             // Where to find jspm packages
             //packages: "jspm_packages",
