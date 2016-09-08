@@ -1,4 +1,18 @@
 {
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "jasmine": true
+    },
+    "extends": [
+      "xo-space/esnext"
+    ],
+    "globals": {
+      "SystemJS": true,
+      "__moduleName": true
+    }
+  },
   "dependencies": {
     "reflect-metadata": "^0.1.8"
   },
@@ -256,20 +270,6 @@
           "readline": "@empty"
         }
       }
-    }
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "browser": true,
-      "jasmine": true
-    },
-    "extends": [
-      "xo-space/esnext"
-    ],
-    "globals": {
-      "SystemJS": true,
-      "__moduleName": true
     }
   }
 }

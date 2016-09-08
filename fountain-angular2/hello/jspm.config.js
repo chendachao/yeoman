@@ -1,11 +1,7 @@
 SystemJS.config({
   transpiler: 'ts',
   typescriptOptions: {
-    'sourceMap': true,
-    'emitDecoratorMetadata': true,
-    'experimentalDecorators': true,
-    'removeComments': false,
-    'noImplicitAny': false
+    'tsconfig': true
   },
   packages: {
     'src': {

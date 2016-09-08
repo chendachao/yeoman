@@ -25,7 +25,8 @@ module.exports = function (config) {
       // TODO: clean
       serveFiles: [].concat(
           glob.sync(conf.path.src('app/**/*.html'))
-          ,glob.sync(conf.path.src('app/**/*.css'))
+          ,glob.sync(conf.path.src('app/**/*.css')),
+          'tsconfig.json'
       )
     },
     plugins: [

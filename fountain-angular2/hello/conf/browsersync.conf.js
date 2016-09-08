@@ -11,6 +11,7 @@ module.exports = function () {
         '/jspm_packages': 'jspm_packages',
         '/jspm.config.js': 'jspm.config.js',
         '/jspm.browser.js': 'jspm.browser.js',
+        '/tsconfig.json': 'tsconfig.json',
         '/src': 'src'
       }
     },
