@@ -22,7 +22,11 @@ module.exports = function (config) {
       loadFiles: glob.sync(conf.path.src('app/**/*.ts')),
       config: 'jspm.config.js',
       browser: 'jspm.test.js',
-      serveFiles: glob.sync(conf.path.src('app/**/*.html'))
+      // TODO: clean
+      serveFiles: [].concat(
+          glob.sync(conf.path.src('app/**/*.html'))
+          ,glob.sync(conf.path.src('app/**/*.css'))
+      )
     },
     plugins: [
       require('karma-jspm'),

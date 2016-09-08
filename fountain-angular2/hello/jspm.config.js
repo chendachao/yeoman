@@ -1,7 +1,18 @@
 SystemJS.config({
   packages: {
     'src': {
-      'defaultExtension': 'ts'
+      'defaultExtension': 'ts',
+      'meta': {
+        '*.html': {
+          'loader': 'text'
+        },
+        '*.css': {
+          'loader': 'css'
+        },
+        '*.json': {
+          'loader': 'json'
+        }
+      }
     },
     'typings': {
       'defaultExtension': 'ts'
@@ -35,15 +46,18 @@ SystemJS.config({
     'ace': 'github:ajaxorg/ace-builds@1.2.5',
     'bootstrap': 'github:twbs/bootstrap@3.3.7',
     'core-js': 'npm:core-js@2.4.1',
+    'css': 'github:systemjs/plugin-css@0.1.27',
     'es6-shim': 'npm:es6-shim@0.35.1',
     'font-awesome': 'npm:font-awesome@4.6.3',
     'fs': 'github:jspm/nodelibs-fs@0.2.0-alpha',
     'jquery': 'npm:jquery@3.1.0',
+    'json': 'github:systemjs/plugin-json@0.1.2',
     'os': 'github:jspm/nodelibs-os@0.2.0-alpha',
     'path': 'github:jspm/nodelibs-path@0.2.0-alpha',
     'process': 'github:jspm/nodelibs-process@0.2.0-alpha',
     'reflect-metadata': 'npm:reflect-metadata@0.1.3',
     'rxjs': 'npm:rxjs@5.0.0-beta.6',
+    'text': 'github:systemjs/plugin-text@0.0.9',
     'ts': 'github:frankwallis/plugin-typescript@4.0.16',
     'ts-helpers': 'npm:ts-helpers@1.1.1',
     'typescript': 'npm:typescript@1.8.10',
