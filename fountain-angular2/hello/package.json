@@ -1,4 +1,12 @@
 {
+  "scripts": {
+    "build": "gulp",
+    "serve": "gulp serve",
+    "serve:dist": "gulp serve:dist",
+    "test": "gulp test",
+    "test:auto": "gulp test:auto",
+    "jspm": "jspm"
+  },
   "eslintConfig": {
     "root": true,
     "env": {
@@ -48,26 +56,18 @@
     "gulp-util": "^3.0.7",
     "jasmine": "^2.4.1",
     "jspm": "0.17.0-beta.25",
-    "karma": "^0.13.14",
-    "karma-chrome-launcher": "^0.2.3",
-    "karma-coverage": "^0.5.3",
-    "karma-jasmine": "^0.3.8",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.0.2",
     "karma-jspm": "^2.0.2",
-    "karma-junit-reporter": "^0.4.2",
+    "karma-junit-reporter": "^1.1.0",
     "karma-spec-reporter": "0.0.26",
     "systemjs-builder": "0.15.23",
     "tslint": "^3.2.1",
     "typescript": "^1.7.5",
     "typings": "^1.0.4",
     "uglify-save-license": "^0.4.1"
-  },
-  "scripts": {
-    "build": "gulp",
-    "serve": "gulp serve",
-    "serve:dist": "gulp serve:dist",
-    "test": "gulp test",
-    "test:auto": "gulp test:auto",
-    "jspm": "jspm"
   },
   "jspm": {
     "dependencies": {
