@@ -8,7 +8,8 @@ module.exports = function (config) {
     autoWatch: false,
     logLevel: 'INFO',
     junitReporter: {
-      outputDir: 'test-reports'
+      outputDir: "target/reports/tests-unit/unit.xml",
+      suite: "unit"
     },
     browsers: [
       'Chrome'
@@ -24,12 +25,14 @@ module.exports = function (config) {
       serveFiles: glob.sync(conf.path.src('app/**/*.html'))
     },
     plugins: [
+      require('karma-jspm'),
       require('karma-jasmine'),
       require('karma-junit-reporter'),
+      require('karma-spec-reporter'),
       require('karma-coverage'),
-      require('karma-chrome-launcher'),
-      require('karma-jspm')
-    ]
+      require('karma-chrome-launcher')
+    ],
+    reporters: ['spec', 'junit']
   };
 
   config.set(configuration);
