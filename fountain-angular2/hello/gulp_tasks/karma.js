@@ -12,14 +12,20 @@ function karmaFinishHandler(done) {
   };
 }
 
-function karmaSingleRun(done) {
+function karmaRun(singleRun, done) {
   const configFile = path.join(process.cwd(), 'conf', 'karma.conf.js');
-  const karmaServer = new karma.Server({configFile}, karmaFinishHandler(done));
+  const karmaServer = new karma.Server({
+    configFile: configFile,
+    singleRun: !!singleRun,
+    autoWatch: !singleRun
+  }, karmaFinishHandler(done));
   karmaServer.start();
 }
 
+function karmaSingleRun(done) {
+  karmaRun(true, done);
+}
+
 function karmaAutoRun(done) {
-  const configFile = path.join(process.cwd(), 'conf', 'karma-auto.conf.js');
-  const karmaServer = new karma.Server({configFile}, karmaFinishHandler(done));
-  karmaServer.start();
+  karmaRun(false, done);
 }
