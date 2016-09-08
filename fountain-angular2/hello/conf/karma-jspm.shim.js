@@ -6,8 +6,8 @@ SystemJS.config({
 });
 SystemJS.import('jspm.config.js').then(() => {
   return Promise.all([
-    System.import('@angular/core/testing'),
-    System.import('@angular/platform-browser-dynamic/testing')
+    SystemJS.import('@angular/core/testing'),
+    SystemJS.import('@angular/platform-browser-dynamic/testing')
   ]).then(providers => {
     const testing = providers[0];
     const testingBrowser = providers[1];
