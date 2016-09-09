@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
-import {HeaderComponent} from './header/header.ts';
-import {TitleComponent} from './title/title.ts';
+import {HeaderComponent} from './core/components/header/header.ts';
+import {TitleComponent} from './core/components/title/title.ts';
 import {TechsComponent} from './techs/techs.ts';
-import {FooterComponent} from './footer/footer.ts';
-import {HelloComponent} from './hello/hello.ts';
+import {FooterComponent} from './core/components/footer/footer.ts';
+import {HelloComponent} from './core/components/hello/hello.ts';
 
 import template from './main.html!text';
 

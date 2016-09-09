@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Tech} from './techs.ts';
+import {Tech} from '../techs/techs.ts';
 
 import template from './tech.html!text';
 

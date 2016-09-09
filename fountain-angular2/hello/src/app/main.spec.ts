@@ -5,9 +5,9 @@ import 'zone.js/dist/async-test';
 import {Component} from '@angular/core';
 import {MainComponent} from './main.ts';
 import {TechsComponent} from './techs/techs.ts';
-import {FooterComponent} from './footer/footer.ts';
-import {HeaderComponent} from './header/header.ts';
-import {TitleComponent} from './title/title.ts';
+import {FooterComponent} from './core/components/footer/footer.ts';
+import {HeaderComponent} from './core/components/header/header.ts';
+import {TitleComponent} from './core/components/title/title.ts';
 import {inject, async, TestComponentBuilder, ComponentFixture} from '@angular/core/testing';
 
 @Component({

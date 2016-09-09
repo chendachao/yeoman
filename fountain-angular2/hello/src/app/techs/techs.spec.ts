@@ -6,7 +6,7 @@ import {MockBackend, MockConnection} from '@angular/http/testing';
 import {Http, BaseRequestOptions, Response, ResponseOptions} from '@angular/http';
 import {Component, Input, provide} from '@angular/core';
 import {TechsComponent, Tech} from './techs.ts';
-import {TechComponent} from './tech.ts';
+import {TechComponent} from '../tech/tech.ts';
 import {inject, async, TestComponentBuilder, ComponentFixture, addProviders} from '@angular/core/testing';
 
 import {Observable} from 'rxjs/Rx';

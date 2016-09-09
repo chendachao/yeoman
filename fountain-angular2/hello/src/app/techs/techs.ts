@@ -3,7 +3,7 @@ import {Http, HTTP_PROVIDERS} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 // TODO: clean
 import 'rxjs/Rx';
-import {TechComponent} from './tech.ts';
+import {TechComponent} from '../tech/tech.ts';
 
 import template from './techs.html!text';
 
