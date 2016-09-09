@@ -2,17 +2,17 @@ import {Component} from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
 
-import * as _tempalte from './hello.html';
-import _styles from './hello.css!';
+import template from './hello.html!text';
+import styles from './hello.scss!';
 
-let template = _tempalte && _tempalte.default ? _tempalte.default : _tempalte;
-let styles = _styles && _styles.default ? _styles.default : _styles;
+// let template = _template && _template.default ? _template.default : _template;
+// let styles = _styles && _styles.default ? _styles.default : _styles;
 
 @Component({
   selector: 'fountain-hello',
-  moduleId: __moduleName,
+  // moduleId: __moduleName,
   template: template,
-  styleUrl: [styles]
+  styles: [styles]
 })
 export class HelloComponent {
   public hello: string;

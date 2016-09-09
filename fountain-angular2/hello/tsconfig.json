@@ -2,11 +2,14 @@
   "compilerOptions": {
     "target": "es5",
     "module": "system",
+    "declaration": false,
     "moduleResolution": "node",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
+    "pretty": true,
+    "noLib": false,
     "noImplicitAny": true,
     "noEmit": true
   },

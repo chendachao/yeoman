@@ -1,12 +1,45 @@
 SystemJS.config({
-  transpiler: 'ts',
+  devConfig: {
+    'map': {
+      'plugin-babel': 'npm:systemjs-plugin-babel@0.0.14',
+      'ts': 'github:frankwallis/plugin-typescript@5.1.2'
+    },
+    'packages': {
+      'github:frankwallis/plugin-typescript@5.1.2': {
+        'map': {
+          'typescript': 'npm:typescript@2.0.2'
+        }
+      }
+    }
+  },
+  transpiler: 'plugin-babel',
+  babelOptions: {
+    "optional": [
+      "runtime",
+      "optimisation.modules.system"
+    ],
+    "compact": false
+  },
   typescriptOptions: {
     'tsconfig': true
   },
   packages: {
     'src': {
       'defaultExtension': 'ts',
+      "format": "system",
       'meta': {
+        "*.js": {
+          "loader": "plugin-babel"
+        },
+        "*.jsx": {
+          "loader": "plugin-babel"
+        },
+        "*.ts": {
+          "loader": "ts"
+        },
+        "*.tsx": {
+          "loader": "ts"
+        },
         '*.html': {
           'loader': 'text'
         },
@@ -20,6 +53,10 @@ SystemJS.config({
           'loader': 'json'
         }
       }
+    },
+    "scss": {
+      "defaultExtension": "js",
+      "loader": "plugin-babel"
     },
     'typings': {
       'defaultExtension': 'ts'
@@ -67,19 +104,13 @@ SystemJS.config({
     'stream': 'github:jspm/nodelibs-stream@0.2.0-alpha',
     'string_decoder': 'github:jspm/nodelibs-string_decoder@0.2.0-alpha',
     'text': 'github:systemjs/plugin-text@0.0.9',
-    'ts': 'github:frankwallis/plugin-typescript@4.0.16',
     'ts-helpers': 'npm:ts-helpers@1.1.1',
-    'typescript': 'npm:typescript@1.8.10',
+    'typescript': 'npm:typescript@2.0.2',
     'util': 'github:jspm/nodelibs-util@0.2.0-alpha',
     'vm': 'github:jspm/nodelibs-vm@0.2.0-alpha',
     'zone.js': 'npm:zone.js@0.6.17'
   },
   packages: {
-    'github:frankwallis/plugin-typescript@4.0.16': {
-      'map': {
-        'typescript': 'npm:typescript@1.8.10'
-      }
-    },
     'github:jspm/nodelibs-os@0.2.0-alpha': {
       'map': {
         'os-browserify': 'npm:os-browserify@0.2.1'
@@ -237,7 +268,7 @@ SystemJS.config({
         'bn.js': 'npm:bn.js@4.11.6',
         'inherits': 'npm:inherits@2.0.3',
         'hash.js': 'npm:hash.js@1.0.3',
-        'brorand': 'npm:brorand@1.0.5'
+        'brorand': 'npm:brorand@1.0.6'
       }
     },
     'npm:browserify-cipher@1.0.0': {
@@ -250,7 +281,7 @@ SystemJS.config({
     'npm:miller-rabin@4.0.0': {
       'map': {
         'bn.js': 'npm:bn.js@4.11.6',
-        'brorand': 'npm:brorand@1.0.5'
+        'brorand': 'npm:brorand@1.0.6'
       }
     },
     'npm:browserify-des@1.0.0': {

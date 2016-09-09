@@ -27,6 +27,7 @@
     "reflect-metadata": "0.1.8"
   },
   "devDependencies": {
+    "@uiuxengineering/karma-jspm": "^2.2.19",
     "autoprefixer": "6.2.3",
     "babel-eslint": "6.0.2",
     "browser-sync": "2.9.11",
@@ -67,7 +68,7 @@
     "karma-spec-reporter": "0.0.26",
     "systemjs-builder": "0.15.31",
     "tslint": "3.2.1",
-    "typescript": "1.7.5",
+    "typescript": "1.8.10",
     "typings": "^1.0.4",
     "uglify-save-license": "0.4.1"
   },
@@ -88,10 +89,12 @@
       "sass": "github:mobilexag/plugin-sass@^0.4.6",
       "scss": "github:KevCJones/plugin-scss@^0.2.11",
       "text": "github:systemjs/plugin-text@^0.0.9",
-      "ts": "github:frankwallis/plugin-typescript@4.0.16",
       "ts-helpers": "npm:ts-helpers@^1.1.1"
     },
-    "devDependencies": {},
+    "devDependencies": {
+      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.14",
+      "ts": "github:frankwallis/plugin-typescript@^5.1.2"
+    },
     "peerDependencies": {
       "@angular/common": "npm:@angular/common@2.0.0-rc.4",
       "@angular/compiler": "npm:@angular/compiler@2.0.0-rc.4",
@@ -261,7 +264,7 @@
           }
         }
       },
-      "npm:typescript@1.8.10": {
+      "npm:typescript@2.0.2": {
         "browser": {},
         "map": {
           "buffer": "@empty",
