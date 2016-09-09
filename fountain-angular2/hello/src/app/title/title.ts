@@ -1,8 +1,9 @@
 import {Component} from '@angular/core';
 
+import template from './title.html!text';
+
 @Component({
   selector: 'fountain-title',
-  moduleId: __moduleName,
-  templateUrl: 'title.html'
+  template: template
 })
 export class TitleComponent {}

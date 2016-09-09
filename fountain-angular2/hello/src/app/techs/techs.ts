@@ -1,8 +1,11 @@
 import {Component} from '@angular/core';
 import {Http, HTTP_PROVIDERS} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
+// TODO: clean
 import 'rxjs/Rx';
 import {TechComponent} from './tech.ts';
+
+import template from './techs.html!text';
 
 export class Tech {
   constructor(
@@ -15,8 +18,7 @@ export class Tech {
 
 @Component({
   selector: 'fountain-techs',
-  moduleId: __moduleName,
-  templateUrl: 'techs.html',
+  template: template,
   directives: [TechComponent],
   providers: [HTTP_PROVIDERS]
 })

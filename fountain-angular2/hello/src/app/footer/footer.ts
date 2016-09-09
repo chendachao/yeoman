@@ -1,8 +1,9 @@
 import {Component} from '@angular/core';
 
+import template from './footer.html!text';
+
 @Component({
   selector: 'fountain-footer',
-  moduleId: __moduleName,
-  templateUrl: 'footer.html'
+  template: template
 })
 export class FooterComponent {}

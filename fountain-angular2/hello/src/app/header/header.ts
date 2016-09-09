@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 
+
+import template from './header.html!text';
+
 @Component({
     selector: 'fountain-header',
-    moduleId: __moduleName,
-    templateUrl: 'header.html'
+    template: template
 })
 export class HeaderComponent {
 }

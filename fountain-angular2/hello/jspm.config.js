@@ -14,11 +14,11 @@ SystemJS.config({
   },
   transpiler: 'plugin-babel',
   babelOptions: {
-    "optional": [
-      "runtime",
-      "optimisation.modules.system"
+    'optional': [
+      'runtime',
+      'optimisation.modules.system'
     ],
-    "compact": false
+    'compact': false
   },
   typescriptOptions: {
     'tsconfig': true
@@ -26,19 +26,20 @@ SystemJS.config({
   packages: {
     'src': {
       'defaultExtension': 'ts',
-      "format": "system",
+      'main': 'index.ts',
+      'format': 'system',
       'meta': {
-        "*.js": {
-          "loader": "plugin-babel"
+        '*.js': {
+          'loader': 'plugin-babel'
         },
-        "*.jsx": {
-          "loader": "plugin-babel"
+        '*.jsx': {
+          'loader': 'plugin-babel'
         },
-        "*.ts": {
-          "loader": "ts"
+        '*.ts': {
+          'loader': 'ts'
         },
-        "*.tsx": {
-          "loader": "ts"
+        '*.tsx': {
+          'loader': 'ts'
         },
         '*.html': {
           'loader': 'text'
@@ -54,9 +55,9 @@ SystemJS.config({
         }
       }
     },
-    "scss": {
-      "defaultExtension": "js",
-      "loader": "plugin-babel"
+    'scss': {
+      'defaultExtension': 'js',
+      'loader': 'plugin-babel'
     },
     'typings': {
       'defaultExtension': 'ts'
@@ -99,10 +100,10 @@ SystemJS.config({
     'process': 'github:jspm/nodelibs-process@0.2.0-alpha',
     'reflect-metadata': 'npm:reflect-metadata@0.1.3',
     'rxjs': 'npm:rxjs@5.0.0-beta.6',
-    'sass': 'github:mobilexag/plugin-sass@0.4.6',
     'scss': 'github:KevCJones/plugin-scss@0.2.11',
     'stream': 'github:jspm/nodelibs-stream@0.2.0-alpha',
     'string_decoder': 'github:jspm/nodelibs-string_decoder@0.2.0-alpha',
+    'systemjs-hot-reloader': 'github:capaj/systemjs-hot-reloader@0.6.0',
     'text': 'github:systemjs/plugin-text@0.0.9',
     'ts-helpers': 'npm:ts-helpers@1.1.1',
     'typescript': 'npm:typescript@2.0.2',
@@ -124,18 +125,6 @@ SystemJS.config({
     'npm:font-awesome@4.6.3': {
       'map': {
         'css': 'github:systemjs/plugin-css@0.1.27'
-      }
-    },
-    'github:mobilexag/plugin-sass@0.4.6': {
-      'map': {
-        'sass.js': 'npm:sass.js@0.9.12',
-        'postcss': 'npm:postcss@5.2.0',
-        'url': 'github:jspm/nodelibs-url@0.1.0',
-        'path': 'github:jspm/nodelibs-path@0.1.0',
-        'autoprefixer': 'npm:autoprefixer@6.4.1',
-        'lodash': 'npm:lodash@4.15.0',
-        'reqwest': 'github:ded/reqwest@2.0.5',
-        'fs': 'github:jspm/nodelibs-fs@0.1.2'
       }
     },
     'github:KevCJones/plugin-scss@0.2.11': {
@@ -386,6 +375,18 @@ SystemJS.config({
         'process-nextick-args': 'npm:process-nextick-args@1.0.7',
         'buffer-shims': 'npm:buffer-shims@1.0.0',
         'core-util-is': 'npm:core-util-is@1.0.2'
+      }
+    },
+    'github:capaj/systemjs-hot-reloader@0.6.0': {
+      'map': {
+        'debug': 'npm:debug@2.2.0',
+        'weakee': 'npm:weakee@1.0.0',
+        'socket.io-client': 'github:socketio/socket.io-client@1.4.8'
+      }
+    },
+    'npm:debug@2.2.0': {
+      'map': {
+        'ms': 'npm:ms@0.7.1'
       }
     }
   }
