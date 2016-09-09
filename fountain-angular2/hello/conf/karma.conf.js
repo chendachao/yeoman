@@ -115,7 +115,7 @@ module.exports = function (config) {
             // TODO: clean
             // Make additional files/a file pattern available for jspm to load, but not load it right away.
             serveFiles: [].concat(  // make sure that all files are available
-                glob.sync(conf.path.src('app/**/!(*.spec).ts')),
+                glob.sync(conf.path.src('app/**/*!(*.spec).ts')),
                 glob.sync(conf.path.src('app/**/*.html')),
                 glob.sync(conf.path.src('app/**/*.css')),
                 glob.sync(conf.path.src('app/**/*.scss')),

@@ -32,7 +32,7 @@ export class TechsComponent {
 
   getTechs(): Observable<Tech[]> {
     return this.http
-      .get('src/app/techs/techs.json')
+      .get('src/app/core/partials/techs/techs.json')
       .map(response => response.json());
   }
 }

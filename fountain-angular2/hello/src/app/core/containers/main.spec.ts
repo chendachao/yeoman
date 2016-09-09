@@ -1,13 +1,13 @@
-/// <reference path="../../typings/index.d.ts"/>
+/// <reference path="../../../../typings/index.d.ts"/>
 
 import 'zone.js/dist/zone';
 import 'zone.js/dist/async-test';
 import {Component} from '@angular/core';
 import {MainComponent} from './main.ts';
-import {TechsComponent} from './techs/techs.ts';
-import {FooterComponent} from './core/components/footer/footer.ts';
-import {HeaderComponent} from './core/components/header/header.ts';
-import {TitleComponent} from './core/components/title/title.ts';
+import {TechsComponent} from '../partials/techs/techs.ts';
+import {FooterComponent} from '../partials/footer/footer.ts';
+import {HeaderComponent} from '../partials/header/header.ts';
+import {TitleComponent} from '../partials/title/title.ts';
 import {inject, async, TestComponentBuilder, ComponentFixture} from '@angular/core/testing';
 
 @Component({

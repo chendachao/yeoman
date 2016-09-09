@@ -2,7 +2,7 @@
 
 import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES, RouterConfig} from '@angular/router';
-import {MainComponent} from './app/main.ts';
+import {MainComponent} from './app/core/containers/main.ts';
 
 @Component({
   selector: 'fountain-root',
