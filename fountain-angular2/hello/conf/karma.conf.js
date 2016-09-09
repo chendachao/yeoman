@@ -45,7 +45,8 @@ module.exports = function (config) {
                 glob.sync(conf.path.src('app/**/!(*.spec).ts')),
                 glob.sync(conf.path.src('app/**/*.html')),
                 glob.sync(conf.path.src('app/**/*.css')),
-                glob.sync(conf.path.src('../tsconfig.json'))
+                glob.sync(conf.path.root('typings/**/*.*')),
+                glob.sync(conf.path.root('tsconfig.json'))
             ),
             
             // SystemJS configuration specifically for tests, added after your config file.
