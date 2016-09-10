@@ -12,7 +12,7 @@ module.exports = function (config) {
             require('karma-jasmine'),
             require('karma-chrome-launcher'),
             require('karma-junit-reporter'),
-            require('karma-spec-reporter'),
+            require('karma-mocha-reporter'),
             require('karma-coverage')
         ],
     
@@ -48,7 +48,12 @@ module.exports = function (config) {
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
         // https://www.npmjs.com/package/karma-junit-reporter
         // https://www.npmjs.com/package/karma-spec-reporter
-        reporters: ['spec', 'junit', 'coverage'],
+        reporters: ['mocha', 'junit', 'coverage'],
+    
+        // reporter options
+        mochaReporter: {
+            output: 'autowatch' //first run will have the full output and the next runs just output the summary and errors in mocha style
+        },
     
         // web server port
         port: 9876,
