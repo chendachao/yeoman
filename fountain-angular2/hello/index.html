@@ -1,17 +1,12 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <base href="/">
     <meta charset="utf-8">
     <title>FountainJS</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
-  
-    <!-- build:css(.tmp) index.css -->
-    <!--TODO: clean-->
-    <link rel="stylesheet" href="src/index.css"/>
-    <!-- endbuild -->
+    <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png"/>
 
     <!-- <script src="node_modules/reflect-metadata/Reflect.js"></script> -->
     <!-- build:js(.tmp) index.js -->
@@ -21,25 +16,27 @@
 
     <!-- endbuild -->
 
-  </head>
+</head>
 
-  <body>
-    <fountain-root>Loading...</fountain-root>
+<body>
+<fountain-root>Loading...</fountain-root>
 
-    <script>
-      var readyForMainLoad;
-      if (location.origin.match(/localhost/)) {
+<script>
+    var readyForMainLoad;
+    if (location.origin.match(/localhost/)) {
         System.trace = true;
-        readyForMainLoad = System.import('systemjs-hot-reloader').then(function(HotReloader){
-          var hr = new HotReloader.default('http://localhost:9089');
+        readyForMainLoad = System.import('systemjs-hot-reloader').then(function (HotReloader) {
+            var hr = new HotReloader.default('http://localhost:9089');
         });
-      }
-      Promise.resolve(readyForMainLoad).then(function() {
-        System.import("./src").then(function(){ console.log('running') });
-      });
-    </script>
+    }
+    Promise.resolve(readyForMainLoad).then(function () {
+        System.import("./src").then(function () {
+            console.log('running')
+        });
+    });
+</script>
 
-  </body>
+</body>
 
 </html>
 
