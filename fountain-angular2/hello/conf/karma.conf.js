@@ -1,6 +1,5 @@
 const conf = require('./gulp.conf');
 const glob = require('glob');
-const path = require('path');
 
 module.exports = function (config) {
     const configuration = {
@@ -10,16 +9,11 @@ module.exports = function (config) {
         
         plugins: [
             require('karma-jspm'),
-            // require('@uiuxengineering/karma-jspm'),
             require('karma-jasmine'),
             require('karma-chrome-launcher'),
             require('karma-junit-reporter'),
             require('karma-mocha-reporter'),
-            require('karma-coverage'),
-            require('karma-babel-preprocessor'),
-            require('karma-typescript-preprocessor'),
-            require('karma-sourcemap-loader'),
-            require('karma-remap-istanbul')
+            require('karma-coverage')
         ],
     
         // frameworks to use
@@ -38,61 +32,25 @@ module.exports = function (config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'app/**/*!(*.spec).ts': ['coverage', 'typescript', 'babel', 'sourcemap']
+            'app/**/*!(*.spec).ts': ['coverage']
         },
     
-        typescriptPreprocessor: {
-            // options passed to the typescript compiler
-            options: {
-                sourceMap: true, // (optional) Generates corresponding .map file.
-                target: 'ES5', // (optional) Specify ECMAScript target version: 'ES3' (default), or 'ES5'
-                module: 'commonjs', // (optional) Specify module code generation: 'commonjs' or 'amd'
-                noImplicitAny: true, // (optional) Warn on expressions and declarations with an implied 'any' type.
-                noResolve: true, // (optional) Skip resolution and preprocessing.
-                removeComments: true, // (optional) Do not emit comments to output.
-                concatenateOutput: false // (optional) Concatenate and emit output to single file. By default true if module option is omited, otherwise false.
-            },
-            // transforming the filenames
-            transformPath: function(path) {
-                return path.replace(/\.ts$/, '.js');
-            }
-        },
-        
+    
         // test results reporter to use
         // possible values: 'dots', 'progress', 'spec', 'junit'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
         // https://www.npmjs.com/package/karma-junit-reporter
         // https://www.npmjs.com/package/karma-spec-reporter
-        reporters: ['mocha', 'coverage', 'karma-remap-istanbul'],
+        reporters: ['mocha', 'coverage' ],
     
         // reporter options
         mochaReporter: {
             output: 'autowatch' //first run will have the full output and the next runs just output the summary and errors in mocha style
         },
     
-        remapIstanbulReporter: {
-            src: path.join('reports/coverage/coverage-final.json'),
-            reports: {
-                html: path.join('reports/coverage/')
-            },
-            timeoutNotCreated: 1000,
-            timeoutNoMoreFiles: 1000
-        },
-    
         coverageReporter: {
             // map coverage to source typescript or es6 files.
             // remap: true,
-            // isparta works as a custom instrumentor, which must be registered in Karma config:
-            instrumenterOptions: {
-                isparta: {
-                    noCompact: true
-                }
-            },
-            instrumenters: {isparta: require('isparta')},
-            instrumenter: {
-                'src/**/*.ts': 'isparta'
-            },
-            includeAllSources: true,
             dir: 'reports/coverage',
             reporters: [
                 // will generate html report
@@ -210,8 +168,6 @@ module.exports = function (config) {
             '/src/': '/base/src/'
         }
     };
-    
-    console.log('process cwd: '+process.cwd())
     
     config.set(configuration);
 };
