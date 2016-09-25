@@ -1,20 +1,22 @@
 /// <reference path="../typings/index.d.ts"/>
 
-import 'es6-shim';
+import 'core-js/client/shim';
 import 'zone.js/dist/zone';
 
-import {bootstrap} from '@angular/platform-browser-dynamic';
+import '@angular/common';
+import 'rxjs';
 
-import {provideRouter} from '@angular/router';
 import {enableProdMode} from '@angular/core';
-import {routes, RootComponent} from './routes.ts';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {AppModule} from './app/index.ts';
 
 import {production} from '@system-env';
 
 if (production) {
   enableProdMode();
+} else {
+  Error['stackTraceLimit'] = Infinity; // tslint:disable-line:no-string-literal
+  System.import('zone.js/dist/long-stack-trace-zone'); // tslint:disable-line:no-var-requires
 }
 
-bootstrap(RootComponent, [
-  provideRouter(routes)
-]);
+platformBrowserDynamic().bootstrapModule(AppModule);

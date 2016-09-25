@@ -7,7 +7,7 @@ const del = require('del');
 const conf = require('../conf/gulp.conf');
 
 gulp.task('systemjs', gulp.series(replaceTemplates, systemjs));
-gulp.task('systemjs:html', gulp.parallel(updateIndexHtml, copyVendor));
+gulp.task('systemjs:html', updateIndexHtml);
 
 function systemjs(done) {
   const builder = new Builder('./', 'jspm.config.js');
@@ -33,13 +33,6 @@ function systemjs(done) {
     del([conf.path.tmp('templates')]);
     done();
   }, done);
-}
-
-function copyVendor() {
-  return gulp.src([
-    'node_modules/reflect-metadata/Reflect.js'
-  ])
-  .pipe(gulp.dest(conf.path.dist('vendor')));
 }
 
 function replaceTemplates() {
