@@ -2,3 +2,5 @@
 .temp/
 dist/
 typings/
+*/jspm_packages/*
+**/node_modules/*
