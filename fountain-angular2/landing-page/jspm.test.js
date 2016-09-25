@@ -36,23 +36,23 @@ function mapAngularTestingBundles() {
 
 SystemJS.import('jspm.config.js')
   .then(mapAngularTestingBundles)
-  .then(() => SystemJS.import('reflect-metadata'))
-  .then(() => SystemJS.import('core-js/client/shim'))
-  .then(() => SystemJS.import('zone.js/dist/zone'))
+  .then(() => System.import('reflect-metadata'))
+  .then(() => System.import('core-js/client/shim'))
+  .then(() => System.import('zone.js/dist/zone'))
   .then(() => {
     return Promise.all([
-      SystemJS.import('zone.js/dist/long-stack-trace-zone'),
-      SystemJS.import('zone.js/dist/proxy'),
-      SystemJS.import('zone.js/dist/async-test'),
-      SystemJS.import('zone.js/dist/fake-async-test'),
-      SystemJS.import('zone.js/dist/sync-test'),
-      SystemJS.import('zone.js/dist/jasmine-patch'),
-      SystemJS.import('@angular/common')
+      System.import('zone.js/dist/long-stack-trace-zone'),
+      System.import('zone.js/dist/proxy'),
+      System.import('zone.js/dist/async-test'),
+      System.import('zone.js/dist/fake-async-test'),
+      System.import('zone.js/dist/sync-test'),
+      System.import('zone.js/dist/jasmine-patch'),
+      System.import('@angular/common')
     ]);
   }).then(() => {
     return Promise.all([
-      SystemJS.import('@angular/core/testing'),
-      SystemJS.import('@angular/platform-browser-dynamic/testing')
+      System.import('@angular/core/testing'),
+      System.import('@angular/platform-browser-dynamic/testing')
     ]);
   }).then(providers => {
     const testing = providers[0];
