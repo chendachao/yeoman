@@ -1,0 +1,3 @@
+[submodule "submodule/yeoman-examples"]
+	path = submodule/yeoman-examples
+	url = https://github.com/addyosmani/yeoman-examples.git
