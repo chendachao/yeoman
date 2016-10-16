@@ -3,52 +3,49 @@
 import 'zone.js/dist/zone';
 import 'zone.js/dist/async-test';
 import {Component} from '@angular/core';
-import {Main} from './main.ts';
-import {Techs} from './techs/techs.ts';
-import {Footer} from './footer.ts';
-import {Header} from './header.ts';
-import {Title} from './title.ts';
-import {inject, async, setBaseTestProviders, TestComponentBuilder, ComponentFixture} from '@angular/core/testing';
-import {TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS, TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS} from '@angular/platform-browser-dynamic/testing';
+import {MainComponent} from './main.ts';
+import {TechsComponent} from './techs/techs.ts';
+import {FooterComponent} from './footer.ts';
+import {HeaderComponent} from './header.ts';
+import {TitleComponent} from './title.ts';
+import {inject, async, TestComponentBuilder, ComponentFixture} from '@angular/core/testing';
 
 @Component({
-  selector: 'Techs',
+  selector: 'fountain-techs',
   template: ''
 })
-class MockTechs {}
+class MockTechsComponent {}
 @Component({
-  selector: 'Footer',
+  selector: 'fountain-ooter',
   template: ''
 })
-class MockFooter {}
+class MockFooterComponent {}
 @Component({
-  selector: 'Header',
+  selector: 'fountain-header',
   template: ''
 })
-class MockHeader {}
+class MockHeaderComponent {}
 @Component({
-  selector: 'Title',
+  selector: 'fountain-title',
   template: ''
 })
-class MockTitle {}
-
-setBaseTestProviders(TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS, TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS);
+class MockTitleComponent {}
 
 describe('main component', () => {
   it('should render the header, title, techs and footer', async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
     tcb
-      .overrideDirective(Main, Techs, MockTechs)
-      .overrideDirective(Main, Footer, MockFooter)
-      .overrideDirective(Main, Header, MockHeader)
-      .overrideDirective(Main, Title, MockTitle)
-      .createAsync(Main)
+      .overrideDirective(MainComponent, TechsComponent, MockTechsComponent)
+      .overrideDirective(MainComponent, FooterComponent, MockFooterComponent)
+      .overrideDirective(MainComponent, HeaderComponent, MockHeaderComponent)
+      .overrideDirective(MainComponent, TitleComponent, MockTitleComponent)
+      .createAsync(MainComponent)
       .then((fixture: ComponentFixture<any>) => {
         fixture.detectChanges();
         const main = fixture.nativeElement;
-        expect(main.querySelector('Header')).toBeDefined();
-        expect(main.querySelector('TitleComponent')).toBeDefined();
-        expect(main.querySelector('Techs')).toBeDefined();
-        expect(main.querySelector('Footer')).toBeDefined();
+        expect(main.querySelector('fountain-header')).toBeDefined();
+        expect(main.querySelector('fountain-title')).toBeDefined();
+        expect(main.querySelector('fountain-techs')).toBeDefined();
+        expect(main.querySelector('fountain-footer')).toBeDefined();
       });
   })));
 });

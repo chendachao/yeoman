@@ -24,7 +24,7 @@ function other() {
 
   return gulp.src([
     path.join(conf.paths.src, '/**/*'),
-    path.join(`!${conf.paths.src}`, '/**/*.{html,css,js,scss}')
+    path.join(`!${conf.paths.src}`, '/**/*.{scss,ts,html}')
   ])
     .pipe(fileFilter)
     .pipe(rename(jsonFilter))

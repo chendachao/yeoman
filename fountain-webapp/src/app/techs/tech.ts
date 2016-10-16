@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {Tech} from './techs.ts';
 
 @Component({
-  selector: 'Tech',
+  selector: 'fountain-tech',
   moduleId: __moduleName,
   templateUrl: 'tech.html'
 })

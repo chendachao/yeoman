@@ -3,12 +3,12 @@
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
 import 'zone.js/dist/async-test';
-import {Footer} from './footer.ts';
+import {FooterComponent} from './footer.ts';
 import {inject, async, TestComponentBuilder, ComponentFixture} from '@angular/core/testing';
 
 describe('footer component', () => {
   it('should render \'FountainJS team\'', async(inject([TestComponentBuilder], (tcb: TestComponentBuilder) => {
-    tcb.createAsync(Footer)
+    tcb.createAsync(FooterComponent)
       .then((fixture: ComponentFixture<any>) => {
         fixture.detectChanges();
         const footer = fixture.nativeElement;

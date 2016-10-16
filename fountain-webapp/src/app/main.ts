@@ -1,13 +1,13 @@
 import {Component} from '@angular/core';
-import {Header} from './header.ts';
-import {Title} from './title.ts';
-import {Techs} from './techs/techs.ts';
-import {Footer} from './footer.ts';
+import {HeaderComponent} from './header.ts';
+import {TitleComponent} from './title.ts';
+import {TechsComponent} from './techs/techs.ts';
+import {FooterComponent} from './footer.ts';
 
 @Component({
-  selector: 'App',
+  selector: 'fountain-app',
   moduleId: __moduleName,
   templateUrl: 'main.html',
-  directives: [Header, Title, Techs, Footer]
+  directives: [HeaderComponent, TitleComponent, TechsComponent, FooterComponent]
 })
-export class Main {}
+export class MainComponent {}

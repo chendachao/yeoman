@@ -2,19 +2,19 @@
 
 import {Component} from '@angular/core';
 import {ROUTER_DIRECTIVES, RouterConfig} from '@angular/router';
-import {Main} from './app/main.ts';
+import {MainComponent} from './app/main.ts';
 
 @Component({
-  selector: 'root',
+  selector: 'fountain-root',
   template: '<router-outlet></router-outlet>',
   directives: [ROUTER_DIRECTIVES]
 })
-export class Root {
+export class RootComponent {
 }
 
 export const routes: RouterConfig = [
   {
     path: '',
-    component: Main
+    component: MainComponent
   }
 ];

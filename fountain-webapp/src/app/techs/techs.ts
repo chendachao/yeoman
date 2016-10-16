@@ -14,13 +14,13 @@ export class Tech {
 }
 
 @Component({
-  selector: 'Techs',
+  selector: 'fountain-techs',
   moduleId: __moduleName,
   templateUrl: 'techs.html',
   directives: [TechComponent],
   providers: [HTTP_PROVIDERS]
 })
-export class Techs {
+export class TechsComponent {
   public techs: Tech[];
   public tech: Tech;
 
