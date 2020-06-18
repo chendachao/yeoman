@@ -4,7 +4,7 @@
   "main": "server/index.js",
   "dependencies": {
     
-    "angular": "~1.5.5",
+    "angular": "~1.8.0",
     "bootstrap-sass": "~3.3.7",
     "bootstrap": "~3.3.7",
     "bootstrap-social": "^5.0.0",
