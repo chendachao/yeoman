@@ -41,7 +41,7 @@
     "sqlite3": "~3.1.1",
     "express-sequelize-session": "0.4.0",
     "jsonwebtoken": "^7.0.0",
-    "express-jwt": "^3.0.0",
+    "express-jwt": "^6.0.0",
     "passport": "~0.3.0",
     "passport-local": "^1.0.0",
     "passport-twitter": "^1.0.3",
