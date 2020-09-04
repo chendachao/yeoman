@@ -37,7 +37,7 @@
     "mongoose": "^4.1.2",
     "bluebird": "^3.3.3",
     "connect-mongo": "^1.2.1",
-    "sequelize": "^3.23.6",
+    "sequelize": "^6.3.5",
     "sqlite3": "~3.1.1",
     "express-sequelize-session": "0.4.0",
     "jsonwebtoken": "^7.0.0",
